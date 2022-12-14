@@ -5,6 +5,8 @@ import linkedList.Mouse;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.*;
+
 
 public class Main {
     public static void main(String[] args)/* throws IOException */ {
@@ -99,64 +101,83 @@ public class Main {
 //        }
 
 
-        LinkedList<Animal> animals = new LinkedList<>();
-        LinkedList<Animal> cats = new LinkedList<>();
-        for (int i = 1; i <= 50; i++) {
-            animals.add(new Cat(i));
-            animals.add(new Dog(i));
-        }
-        int counterCat = 0;
-        int counterDog = 0;
-        int mouseAge = 1;
-        for (int i = 1; i < animals.size(); i++) {
-            if (animals.get(i) instanceof Cat) {
-                counterCat++;
-                if (counterCat == 5) {
-                    animals.remove(i);
-                    counterCat = 0;
-                }
-            }
-            if (animals.get(i) instanceof Dog) {
-                counterDog++;
-                if (counterDog == 3) {
-                    animals.add(i + 1, new Mouse(mouseAge));
-                    counterDog = 0;
-                    mouseAge++;
-                }
-            }
+//        LinkedList<Animal> animals = new LinkedList<>();
+//        LinkedList<Animal> cats = new LinkedList<>();
+//        for (int i = 1; i <= 50; i++) {
+//            animals.add(new Cat(i));
+//            animals.add(new Dog(i));
+//        }
+//        int counterCat = 0;
+//        int counterDog = 0;
+//        int mouseAge = 1;
+//        for (int i = 1; i < animals.size(); i++) {
+//            if (animals.get(i) instanceof Cat) {
+//                counterCat++;
+//                if (counterCat == 5) {
+//                    animals.remove(i);
+//                    counterCat = 0;
+//                }
+//            }
+//            if (animals.get(i) instanceof Dog) {
+//                counterDog++;
+//                if (counterDog == 3) {
+//                    animals.add(i + 1, new Mouse(mouseAge));
+//                    counterDog = 0;
+//                    mouseAge++;
+//                }
+//            }
+//
+//        }
+//        for (int i = 0; i < animals.size() - 1; i++) {
+//            if (animals.get(i) instanceof Mouse) {
+//                if (animals.get(i - 1) instanceof Cat) {
+//                    cats.add(animals.get(i - 1));
+//                    animals.remove(i - 1);
+//                }
+//                if (animals.get(i + 1) instanceof Cat) {
+//                    cats.add(animals.get(i + 1));
+//                    animals.remove(i + 1);
+//                }
+//            }
+//        }
+//
+//        int catAge = 0;
+//        int dogAge = 0;
+//        int mouseAge1 = 0;
+//        for (int i = 0; i < animals.size(); i++) {
+//            if (animals.get(i) instanceof Dog) {
+//                dogAge += animals.get(i).getAge();
+//            }
+//            if (animals.get(i) instanceof Cat) {
+//                catAge += animals.get(i).getAge();
+//            }
+//            if (animals.get(i) instanceof Mouse) {
+//                mouseAge1 += animals.get(i).getAge();
+//            }
+//        }
+//        System.out.println("CatAge: " + catAge);
+//        System.out.println("DogAge: " + dogAge);
+//        System.out.println("MouseAge: " + mouseAge1);
+//        System.out.println(animals);
 
-        }
-        for (int i = 0; i < animals.size() - 1; i++) {
-            if (animals.get(i) instanceof Mouse) {
-                if (animals.get(i - 1) instanceof Cat) {
-                    cats.add(animals.get(i - 1));
-                    animals.remove(i - 1);
-                }
-                if (animals.get(i + 1) instanceof Cat) {
-                    cats.add(animals.get(i + 1));
-                    animals.remove(i + 1);
-                }
-            }
-        }
+//        List<Integer> list = new ArrayList<>();
+//        list.add(80);
+//        list.add(90);
+//        list.add(70);
+//        list.add(60);
+//        list.add(50);
+//        list.add(135489);
+//
+//        list.stream().map(x-> ((x*10)/100)).forEach(x-> System.out.println(x));
 
-        int catAge = 0;
-        int dogAge = 0;
-        int mouseAge1 = 0;
-        for (int i = 0; i < animals.size(); i++) {
-            if (animals.get(i) instanceof Dog) {
-                dogAge += animals.get(i).getAge();
-            }
-            if (animals.get(i) instanceof Cat) {
-                catAge += animals.get(i).getAge();
-            }
-            if (animals.get(i) instanceof Mouse) {
-                mouseAge1 += animals.get(i).getAge();
-            }
-        }
-        System.out.println("CatAge: " + catAge);
-        System.out.println("DogAge: " + dogAge);
-        System.out.println("MouseAge: " + mouseAge1);
-        System.out.println(animals);
+//        List<Studentstream> studentstreamList = new ArrayList<>();
+//        studentstreamList.add(new Studentstream(1,"Sher uulu Nur"));
+//        studentstreamList.add(new Studentstream(2,"Nur uulu Sher"));
+//        studentstreamList.add(new Studentstream(3,"Bolot uulu Sher"));
+//        studentstreamList.add(new Studentstream(4,"Bolot uulu Nur"));
+//        studentstreamList.add(new Studentstream(5,"Almaz uulu Nur"));
+//        studentstreamList.stream().map(fio-> fio.getFio()).forEach(fio-> System.out.println(fio+fio));
+
 
     }
 }
